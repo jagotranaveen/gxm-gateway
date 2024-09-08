@@ -1,0 +1,631 @@
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 600;
+$font-weight-bolder: 700;
+
+$font-size-regular: 16px;
+$font-size-small: 20px;
+$font-size-medium: 24px;
+$font-size-large: 28px;
+$font-primary: "Inter", sans-serif;
+
+.general-info {
+  color: var(--lara-light-global-shade-900);
+  font-size: $font-size-medium;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  line-height: 120%;
+  margin: 0;
+}
+
+.general-info-para {
+  color: var(--lara-light-global-shade-900);
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  line-height: 120%;
+  margin: 5px 0;
+}
+
+.edit-button {
+  align-items: center;
+  background-color: var(--lara-light-root-surface-section);
+  border: 1px solid var(--lara-light-green-700);
+  border-radius: 6px;
+  color: var(--lara-light-global-shade-900);
+  cursor: pointer;
+  display: flex;
+  font-size: $font-size-regular;
+  font-weight: $font-weight-bolder;
+  height: 35px;
+  justify-content: center;
+  padding: 12px 20px;
+
+  &:hover {
+    background-color: var(
+      --lara-light-button-success-outlined-active-background
+    );
+  }
+}
+
+.gen-card {
+  background-color: var(--lara-light-root-surface-section);
+  border-left: 1px solid var(--lara-light-root-surface-border);
+  border-radius: 6px;
+  padding: 40px;
+
+  .p-card-body {
+    padding: 0;
+  }
+
+  .p-card-content {
+    padding: 0;
+  }
+}
+
+.general-info-container {
+  padding-bottom: 40px;
+}
+
+.input-label {
+  color: var(--lara-light-global-shade-700);
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  line-height: 120%;
+}
+
+.input-field {
+  background-color: var(--lara-light-root-surface-section) !important;
+  border: 1px solid var(--lara-light-global-shade-400);
+  border-radius: 6px;
+  color: var(--lara-light-global-shade-600);
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  line-height: normal;
+  padding: 12px;
+
+  &:hover {
+    border: 1px solid var(--lara-light-green-700);
+  }
+
+  &:focus {
+    border: 1px solid var(--lara-light-green-700);
+    box-shadow: 0 0 5px 2.5px var(--lara-light-button-success-focus-shadow);
+  }
+}
+
+.sidebar-align {
+  align-items: flex-start;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  flex: 1 0 0;
+  gap: 8px;
+  justify-content: space-between;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+.sidebar-align .pi {
+  color: inherit;
+}
+
+.menu-hover {
+  text-decoration: inherit;
+
+  &:hover {
+    background-color: var(--lara-light-global-shade-200);
+  }
+}
+
+.sidebar-menu {
+  color: var(--lara-light-global-shade-700);
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  line-height: 120%;
+  margin: 0 10px;
+}
+
+.card-height {
+  height: 100vh;
+}
+
+.card-style {
+  background-color: var(--lara-light-global-shade-100);
+  border: 1px solid var(--lara-light-global-shade-300);
+  border-radius: 6px;
+
+  div {
+    padding: 0;
+  }
+}
+
+.entity-header {
+  color: var(--lara-light-global-shade-700);
+  font-size: $font-size-regular;
+  font-weight: $font-weight-regular;
+  line-height: 19.2px;
+  margin: 0;
+}
+
+.header-card {
+  background-color: var(--lara-light-root-surface-section);
+  border: 1px solid var(--lara-light-global-shade-300);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.entity-name {
+  color: var(--lara-light-global-shade-900);
+  font-size: $font-size-large;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  line-height: normal;
+  margin-top: 0;
+}
+
+.active-entity {
+  background-color: var(--lara-light-theme-highlight-background);
+
+  p {
+    color: var(--lara-light-green-800);
+  }
+
+  .icon-color {
+    color: var(--lara-light-green-800);
+    text-decoration: none;
+  }
+}
+
+.tab-panel {
+  color: var(--lara-light-global-shade-600);
+  font-family: $font-primary;
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-bolder;
+
+  &.p-highlight {
+    border-bottom: 2px solid var(--lara-light-green-700);
+    margin-bottom: -1px;
+  }
+}
+
+.p-tabview .p-tabview-nav li {
+  &:hover {
+    border-bottom: 2px solid var(--lara-light-global-shade-500);
+    color: var(--lara-light-global-shade-600);
+    margin-bottom: -1px;
+  }
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  border: none;
+  box-sizing: border-box;
+}
+
+.p-tabview-title {
+  line-height: normal;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled) {
+  background: var(--lara-light-surface-section);
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background: var(--lara-light-surface-section);
+  color: var(--lara-light-global-shade-900);
+
+  &:hover {
+    background: var(--lara-light-surface-section);
+  }
+
+  &:active {
+    background: var(--lara-light-surface-section);
+  }
+}
+
+.p-tabview-panel {
+  background-color: var(--lara-light-surface-section);
+}
+
+.p-tabview-panels {
+  background: var(--lara-light-surface-section);
+}
+
+.p-tabview .p-tabview-panels {
+  padding: 20px 0;
+}
+
+.add-btn {
+  align-items: center;
+  background-color: var(--lara-light-green-700);
+  border: 1px solid var(--lara-light-green-700);
+  border-radius: 6px;
+  color: var(--lara-light-root-surface-section);
+  cursor: pointer;
+  display: flex;
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-bolder;
+  height: 35px;
+  justify-content: center;
+  line-height: normal;
+  padding: 12px 20px;
+
+  &:hover {
+    background-color: #008000;
+  }
+}
+
+.input-wrapper {
+  display: flex;
+  position: relative;
+
+  .span-left {
+    padding: 0 10.5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .span-right {
+    padding: 0 10.5px;
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  input {
+    background-color: var(--lara-light-root-surface-section);
+    border: 1px solid var(--lara-light-global-shade-400);
+    border-radius: 6px;
+    color: var(--lara-light-global-shade-600);
+    font-size: $font-size-regular;
+    font-style: normal;
+    font-weight: $font-weight-regular;
+    line-height: normal;
+    padding: 12px 32px;
+  }
+}
+
+.copy-icon {
+  color: var(--lara-light-global-shade-600);
+  cursor: pointer;
+  padding: 0 10.5px;
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.table-section {
+  margin-top: 24px;
+}
+
+.p-sortable-column {
+  padding: 16px;
+}
+
+.p-datatable-emptymessage {
+  td {
+    padding: 16px;
+  }
+}
+
+.p-column-title {
+  padding-right: 7px;
+
+  &:hover {
+    color: var(--lara-light-green-700);
+  }
+
+  &:focus {
+    color: var(--lara-light-green-700);
+  }
+
+  &:active {
+    color: var(--lara-light-green-700);
+  }
+}
+
+.p-datatable .p-sortable-column.p-highlight .p-sortable-column-icon {
+  background-color: var(--lara-light-theme-highlight-background);
+  color: var(--lara-light-green-700);
+
+  &:hover {
+    background-color: var(--lara-light-theme-highlight-background);
+    color: var(--lara-light-green-700);
+  }
+
+  &:focus {
+    background-color: var(--lara-light-theme-highlight-background);
+    color: var(--lara-light-green-700);
+  }
+
+  &:active {
+    background-color: var(--lara-light-theme-highlight-background);
+    color: var(--lara-light-green-700);
+  }
+}
+
+.p-datatable
+  .p-sortable-column.p-highlight:not(.p-sortable-disabled):hover
+  .p-sortable-column-icon {
+  background-color: var(--lara-light-theme-highlight-background);
+  color: var(--lara-light-green-700);
+
+  &:hover {
+    background-color: var(--lara-light-theme-highlight-background);
+    color: var(--lara-light-green-700);
+  }
+
+  &:focus {
+    background-color: var(--lara-light-theme-highlight-background);
+    color: var(--lara-light-green-700);
+  }
+
+  &:active {
+    background-color: var(--lara-light-theme-highlight-background);
+    color: var(--lara-light-green-700);
+  }
+}
+
+.p-datatable .p-sortable-column.p-highlight {
+  background-color: var(--lara-light-theme-highlight-background);
+  color: var(--lara-light-green-700);
+
+  &:hover {
+    background-color: var(--lara-light-theme-highlight-background);
+    color: var(--lara-light-green-700);
+  }
+
+  &:focus {
+    background-color: var(--lara-light-theme-highlight-background);
+    color: var(--lara-light-green-700);
+  }
+
+  &:active {
+    background-color: var(--lara-light-theme-highlight-background);
+    color: var(--lara-light-green-700);
+  }
+}
+
+.p-datatable {
+  td {
+    padding: 16px;
+  }
+}
+
+.p-component {
+  font-family: $font-primary;
+}
+
+.success-message {
+  align-items: center;
+  background-color: var(--lara-light-button-success-focus-shadow);
+  border-radius: 6px;
+  display: flex;
+  margin-top: 16px;
+  padding: 12px;
+
+  p {
+    color: var(--lara-light-global-shade-900);
+    font-size: $font-size-regular;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+  }
+}
+
+.check-color {
+  color: var(--lara-light-green-800);
+}
+
+.p-tabview-nav {
+  background: var(--lara-light-surface-section);
+}
+
+.p-datatable .p-datatable-tbody {
+  tr {
+    background: inherit;
+  }
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: var(--lara-light-theme-highlight-background);
+  border-color: var(--lara-light-theme-highlight-background);
+  color: var(--lara-light-green-800);
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  background: var(--lara-light-theme-highlight-background);
+  color: var(--lara-light-green-800);
+}
+
+.p-dropdown {
+  &:hover {
+    border: 1px solid var(--lara-light-green-700);
+  }
+
+  &:focus {
+    border: 1px solid var(--lara-light-green-700);
+    box-shadow: 0 0 5px 2.5px var(--lara-light-button-success-focus-shadow);
+  }
+
+  &:focus-within {
+    border: 1px solid var(--lara-light-green-700);
+    box-shadow: 0 0 5px 2.5px var(--lara-light-button-success-focus-shadow);
+  }
+
+  &:active {
+    border: 1px solid var(--lara-light-green-700);
+    box-shadow: 0 0 5px 2.5px var(--lara-light-button-success-focus-shadow);
+  }
+}
+
+.datatable-right-align .p-paginator {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pencil-pointer {
+  cursor: pointer;
+}
+
+.deletion-msg {
+  align-items: center;
+  background-color: rgb(255 231 230 / 70%);
+  border-radius: 6px;
+  display: flex;
+  margin-top: 16px;
+  padding: 12px;
+
+  p {
+    color: var(--lara-light-global-shade-900);
+    font-size: $font-size-regular;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+  }
+}
+
+.cancel-color {
+  color: var(--lara-light-red-700);
+}
+
+.p-dialog .p-dialog-header .p-dialog-header-icon:last-child {
+  display: none !important;
+}
+
+.del-dialog-heading {
+  color: var(--lara-light-global-shade-900);
+  font-size: $font-size-small;
+  font-style: normal;
+  font-weight: $font-weight-bolder;
+  line-height: normal;
+  margin: 0 0 10px;
+}
+
+.del-dialog-para {
+  color: var(--lara-light-global-shade-700);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+}
+
+.confirm-btn {
+  align-items: center;
+  background-color: #dd401d;
+  border: 1px solid #ff7657;
+  border-radius: 6px;
+  color: var(--lara-light-root-surface-section);
+  cursor: pointer;
+  display: flex;
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-bolder;
+  height: 35px;
+  justify-content: center;
+  line-height: normal;
+  padding: 12px 20px;
+}
+
+.country-code {
+  width: 24%;
+}
+
+.phone-number {
+  width: 75%;
+}
+
+.add-new-button {
+  align-items: center;
+  background-color: var(--lara-light-root-surface-section);
+  border: 1px solid var(--lara-light-green-700);
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  font-size: $font-size-regular;
+  font-weight: $font-weight-bolder;
+  height: 42px;
+  justify-content: center;
+  padding: 12px 20px;
+
+  &:hover {
+    background-color: var(
+      --lara-light-button-success-outlined-active-background
+    );
+  }
+}
+
+.contact-label {
+  color: var(--lara-light-global-shade-900);
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-regular;
+  line-height: 120%;
+}
+
+.edit-contact-dialog {
+  width: 724px;
+}
+
+.p-dialog .p-dialog-content {
+  padding: 8px 40px 56px;
+}
+
+.table-col-width {
+  width: 15%;
+}
+
+.input-field.error {
+  border: 1px solid var(--lara-light-red-800);
+}
+
+.error-message {
+  color: var(--lara-light-red-800);
+  font-size: 0.875em;
+}
+
+.filter-container {
+  text-align: right;
+  width: 20%;
+}
+
+.filter-by {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.36px;
+  margin: 0;
+}
+
+.documents-grid {
+  padding: 0 0 40px;
+}
+
+.document-link {
+  text-decoration: none;
+}
+
+.p-inputtext:enabled {
+  border: 1px solid var(--lara-light-global-shade-400);
+  box-shadow: none;
+
+  &:hover {
+    border: 1px solid var(--lara-light-green-700);
+  }
+
+  &:focus {
+    border: 1px solid var(--lara-light-green-700);
+    box-shadow: 0 0 5px 2.5px var(--lara-light-button-success-focus-shadow);
+  }
+}

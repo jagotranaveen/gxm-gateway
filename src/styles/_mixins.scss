@@ -1,0 +1,35 @@
+/* Define your breakpoints */
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);
+
+/* Mixin for max-width */
+@mixin max-width($key) {
+  $value: map-get($breakpoints, $key);
+
+  @media (max-width: $value) {
+    @content;
+  }
+}
+
+/* Mixin for min-width and max-width */
+@mixin between($min-key, $max-key) {
+  $min-value: map-get($breakpoints, $min-key);
+  $max-value: map-get($breakpoints, $max-key);
+
+  @media (min-width: $min-value) and (max-width: $max-value) {
+    @content;
+  }
+}
+
+/* Mixin for min-width */
+@mixin min-width($key) {
+  $value: map-get($breakpoints, $key);
+  
+  @media (min-width: $value) {
+    @content;
+  }
+}

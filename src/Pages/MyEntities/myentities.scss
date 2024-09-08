@@ -1,0 +1,241 @@
+@import "../../styles/_mixins";
+
+
+$font-size-large: 28px;
+$font-size-medium: 20px;
+$font-size-regular: 16px;
+$font-size-small: 12px;
+
+$font-weight-thickbold: 700;
+$font-weight-bold: 600;
+$font-weight-semibold: 400;
+
+$black-color: #000;
+$card-border: #e3ebf1;
+$rate-card-heading: #0e223d;
+$link-color:#0b4720;
+
+.entity-heading {
+  color: var(--lara-light-global-shade-900);
+  font-size: $font-size-large;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  line-height: normal;
+}
+
+.entity-sub-heading {
+  color: var(--lara-light-global-shade-900);
+  font-size: $font-size-medium;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  line-height: 120%;
+}
+
+.entity-cost-heading {
+  color: var(--lara-light-global-shade-900);
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-bold;
+  line-height: 120%;
+}
+
+.entity-filter {
+  color: $black-color;
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-semibold;
+  line-height: normal;
+}
+
+.p-card .p-card-content {
+  padding: 0;
+}
+
+.p-card .p-card-body {
+  padding: 0;
+}
+
+
+
+.entity-card {
+  border: 1px solid $card-border;
+  border-radius: 6px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 40px 24px;
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .p-flag-country {
+    color: var(--lara-light-global-shade-700);
+    font-size: $font-size-regular;
+    font-style: normal;
+    font-weight: $font-weight-semibold;
+    line-height: 120%;
+  }
+
+  .p-card-title {
+    color: var(--lara-light-global-shade-900);
+    flex-grow: 1;
+    font-size: $font-size-regular;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    line-height: 120%;
+  }
+
+  .p-card-details {
+    color: $link-color;
+    cursor: 'pointer';
+    font-size: $font-size-regular;
+    font-style: normal;
+    font-weight: $font-weight-thickbold;
+    line-height: normal;
+    padding-top: 10px;
+    text-decoration: none;
+  }
+}
+
+
+
+.entity-filter-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  .entity-filter {
+    flex: 1;
+    text-align: left;
+  }
+
+  .custom-dropdown,
+  .download-btn {
+    flex: 1;
+    min-width: 210px;
+  }
+
+  .custom-dropdown {
+    width: 100%;
+  }
+
+  .download-btn {
+    align-items: center;
+    background-color: var(--lara-light-green-700);
+    border: 1px solid var(--lara-light-green-700);
+    border-radius: 6px;
+    color: var(--lara-light-root-surface-section);
+    cursor: pointer;
+    display: flex;
+    font-size: var(--font-size-regular);
+    font-style: normal;
+    font-weight: var(--font-weight-thickbold);
+    line-height: normal;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  @include between(md, lg) {
+    .entity-filter-container {
+      flex-direction: column;
+    }
+
+    .custom-dropdown {
+      width: 100%;
+    }
+  }
+
+  @include max-width(sm) {
+    .custom-dropdown,
+    .download-btn {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+.performance-card {
+  border: 1px solid $card-border;
+  border-radius: 6px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px;
+
+  .card-content {
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .rate,
+  .rate-heading {
+    color: $rate-card-heading;
+    font-size: $font-size-medium;
+    font-style: normal;
+    font-weight: $font-weight-bold;
+    line-height: 120%;
+  }
+
+  .pi {
+    font-size: 0;
+  }
+
+  .text-with-icon {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .text-with-icon p {
+    margin: 0;
+  }
+
+  .red-icon {
+    color: var(--lara-light-red-700);
+    font-size: $font-size-small;
+    font-style: normal;
+    font-weight: $font-weight-thickbold;
+    line-height: 120%;
+  }
+
+  .green-icon {
+    color: var(--lara-light-green-800);
+    font-size: $font-size-small;
+    font-style: normal;
+    font-weight: $font-weight-thickbold;
+    line-height: 120%;
+  }
+
+  .custom-down-icon {
+    font-size: $font-size-small;
+    margin-right: 5px;
+    transform: rotate(-45deg);
+  }
+
+  .custom-up-icon {
+    font-size: $font-size-small;
+    margin-right: 5px;
+    transform: rotate(45deg);
+  }
+
+  @include max-width(sm) {
+    .text-with-icon {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+}
+
+@include min-width(lg) {
+  .custom-xl-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}

@@ -1,0 +1,30 @@
+
+.p-panelmenu{
+    box-sizing: border-box;
+    height: 100vh;
+
+    .p-panelmenu-header-content{
+        border: none;
+    }
+
+    .p-panelmenu-content{
+        border: none;
+    }
+}
+
+.link{
+    background-color: #fff;
+    color:#4B5563;
+    text-decoration: none;
+
+    &.active{
+        background-color: #B0E4C3;
+       border-radius: 4px;
+       font-weight: 700;
+    }
+
+    &.inactive:hover{
+            background-color: rgb(176 228 195 / 30%) ;
+            border-radius: 4px;
+    }
+}

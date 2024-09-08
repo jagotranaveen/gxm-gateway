@@ -1,0 +1,301 @@
+@import "../../../../global.scss";
+
+.modal-main-container {
+  height: 100%;
+}
+
+.p-dialog .p-dialog-header {
+  height: 0;
+  padding: 0;
+}
+
+.p-dialog .p-dialog-content {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 56px 40px;
+}
+
+.email-invite-content-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.email-invite-buttons-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.email-list-heading {
+  color: var(--lara-light-global-shade-900);
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.email-list-wrapper {
+  height: 220px;
+  margin: 12px 0 16px;
+  overflow-y: auto;
+
+  .email-items {
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+
+  .email-item {
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    .user-icon {
+      background-color: var(--lara-light-global-shade-300);
+      border-radius: 50%;
+      padding: 8px;
+    }
+
+    span {
+      display: inline-block;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  .email-actions {
+    align-items: center;
+    display: flex;
+
+    .dropdown-width {
+      width: 159px;
+    }
+
+    .delete-btn {
+      color: var(--lara-light-root-surface-section);
+    }
+
+    .delete-container {
+      align-items: center;
+      background: #dd401d;
+      border: 1px solid #ff7657;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      flex-shrink: 0;
+      gap: 8px;
+      height: 40px;
+      justify-content: center;
+      padding: 12px 0;
+      width: 40px;
+    }
+  }
+}
+
+.search-input-wrapper {
+  position: relative;
+  width: 100%;
+
+  .pi-search {
+    color: var(--lara-light-global-shade-300);
+    left: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .email-input {
+    align-items: center;
+    background: var(--lara-light-root-surface-section);
+    border: 1px solid var(--lara-light-global-shade-400);
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 16px 0;
+    max-height: 96px;
+    min-height: 45px;
+    overflow-y: auto;
+    padding: 8px;
+    position: relative;
+
+    &:hover {
+      border: 1px solid var(--lara-light-green-700);
+    }
+
+    &:focus-within {
+      border: 1px solid var(--lara-light-green-700);
+      box-shadow: 0 0 5px 2.5px var(--lara-light-button-success-focus-shadow);
+    }
+  }
+
+  .email-tag {
+    align-items: center;
+    background-color: var(--lara-light-surface-300);
+    border-radius: 20px;
+    display: flex;
+    margin: 4px;
+    padding: 5px 10px;
+  }
+
+  .email-input-field {
+    border: none;
+    color: var(--lara-light-global-shade-600);
+    flex: 1;
+    font-size: $font-size-regular;
+    font-style: normal;
+    font-weight: $font-weight-regular;
+    line-height: normal;
+    outline: none;
+  }
+}
+
+.success-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+
+  .invite-sent-heading {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    margin-top: 16px;
+  }
+
+  .invite-sent-desc {
+    margin: 0;
+  }
+
+  .upper-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .icon-size {
+    font-size: 2em;
+  }
+
+  .success-buttons {
+    display: flex;
+    justify-content: end;
+  }
+}
+
+.search-cancel {
+  color: #000;
+  height: 2px;
+  padding: 6px;
+  width: 2px;
+
+  .p-button-icon {
+    font-size: 8px;
+  }
+}
+
+.skip-btn {
+  align-items: center;
+  background-color: var(--lara-light-root-surface-section);
+  border: 1px solid var(--lara-light-green-700);
+  border-radius: 6px;
+  color: var(--lara-light-global-shade-900);
+  cursor: pointer;
+  display: flex;
+  font-size: $font-size-regular;
+  font-weight: $font-weight-bolder;
+  height: 48px;
+  justify-content: center;
+  padding: 12px 20px;
+
+  &:hover {
+    background-color: var(
+      --lara-light-button-success-outlined-active-background
+    );
+  }
+}
+
+.send-invite-btn {
+  align-items: center;
+  background-color: var(--lara-light-green-700);
+  border: 1px solid var(--lara-light-green-700);
+  border-radius: 6px;
+  color: var(--lara-light-root-surface-section);
+  cursor: pointer;
+  display: flex;
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-bolder;
+  height: 48px;
+  justify-content: center;
+  line-height: normal;
+  padding: 12px 20px;
+
+  &:hover {
+    background-color: #1da750;
+    border: 1px solid #136c34;
+  }
+
+  &.disabled {
+    opacity: 0.7;
+  }
+}
+
+.invite-back-btn {
+  background: none;
+  border: none;
+  color: var(--lara-light-global-shade-700);
+  cursor: pointer;
+  font-size: $font-size-regular;
+  font-style: normal;
+  font-weight: $font-weight-bolder;
+  line-height: normal;
+}
+
+.back-btn-hover {
+  &:hover {
+    background-color: var(--lara-light-global-shade-200);
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 8px;
+    padding: 12px 0;
+    width: 64%;
+  }
+}
+
+.invite-dialog-width {
+  height: 589px;
+  width: 724px;
+}
+
+.invite-dialog {
+  height: 515px;
+  width: 600px;
+}
+
+.invite-dialog-heading {
+  color: var(--lara-light-global-shade-900);
+  flex-grow: 0;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0 0 4px;
+}
+
+.invite-dialog-desc {
+  color: var(--lara-light-global-shade-700);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+}
